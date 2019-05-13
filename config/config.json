@@ -1,0 +1,24 @@
+{
+    "development": {
+        "config_id": "development",
+        "app_name": "userManagement",
+        "app_desc": "user Management App",
+        "node_port": 3000,
+        "database": "dev_usermanagement"
+    },
+    "testing": {
+        "config_id": "testing",
+        "node_port": 4000,
+        "database": "test_usermanagement"
+    },
+    "staging": {
+        "config_id": "staging",
+        "node_port": 8080,
+        "database": "stag_usermanagement"
+    },
+    "production": {
+        "config_id": "production",
+        "node_port": 8080,
+        "database": "prod_usermanagement"
+    }
+}
