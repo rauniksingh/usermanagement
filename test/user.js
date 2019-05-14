@@ -50,5 +50,31 @@ chai.use(chaiHttp);
         });
  });
 
+ describe('/UPDATE User', ()=>{
+  it('it should update the user details', (done)=>{
+      let obj = {
+	       "first_name": "Raunik",
+        "last_name": "Darakjy",
+        "company_name": "Chanay, Jeffrey A Esq"
+      }
+      chai.request('http://localhost:4000')
+          .put('/api/users/2')
+          .send(obj)
+          .end((err, res)=>{
+           res.should.have.status(200)
+          });
+      });
+ });
+
+  describe('/DELETE User', ()=>{
+  it('it should delete the user', (done)=>{
+      chai.request('http://localhost:4000')
+          .delete('/api/users/3')
+          .end((err, res)=>{
+            res.should.have.status(200)
+          });
+      });
+ });
+
 });
 
