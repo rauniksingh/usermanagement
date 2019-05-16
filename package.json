@@ -13,6 +13,7 @@
     "chai-http": "^4.3.0",
     "chalk": "^2.4.2",
     "dotenv": "^8.0.0",
+    "elastic-apm-node": "^2.11.1",
     "express": "^4.16.4",
     "mocha": "^6.1.4",
     "mongoose": "^5.5.7",

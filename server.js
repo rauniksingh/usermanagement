@@ -1,3 +1,7 @@
+const apm = require('elastic-apm-node').start({
+  serviceName: 'User_app_perf',
+  serverUrl: 'http://localhost:8200',
+});
 require('dotenv').config();
 const express = require('express'),
       app = express(),
@@ -6,8 +10,6 @@ const express = require('express'),
       bodyParser = require('body-parser'),
       chalk = require('chalk'),
       config = require('./config/config');
-
-console.log(process.env.NODE_ENV)
 
 const environment = process.env.NODE_ENV || 'development';
 const environmentConfig = config[environment];

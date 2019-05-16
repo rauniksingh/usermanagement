@@ -59,11 +59,11 @@ class Users {
     async _getUser(req, res){
      try {
        let id = req.params.id;
-       let userDetails = await UserAccess._getUserById(id);
+       let userData = await UserAccess._getUserById(id);
 
        if(!userData) return __.customMsg(res, 404, 'User not found');
        
-       return __.successMsg(res, 200, userDetails);
+       return __.successMsg(res, 200, userData);
      } catch (error) {
        __.errorMsg(res, 500, 'Internal server error', error);
       };
