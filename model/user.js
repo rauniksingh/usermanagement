@@ -1,4 +1,7 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose'),
+      mongoosastic = require('mongoosastic'),
+      getElasticInstance = require("../esSetup");
+
 let userSchema = mongoose.Schema({
     id:{
         type: Number,
@@ -33,7 +36,12 @@ let userSchema = mongoose.Schema({
     }
 },{
     timestamps: true
-})
+});
+
+userSchema.plugin(mongoosastic, {
+    esClient: getElasticInstance.getElasticInstance()
+  });
+
 
 let userModel = mongoose.model('users', userSchema, 'users')
 module.exports = userModel

@@ -1,7 +1,7 @@
-const apm = require('elastic-apm-node').start({
-  serviceName: 'User_app_perf',
-  serverUrl: 'http://localhost:8200',
-});
+// const apm = require('elastic-apm-node').start({
+//   serviceName: 'User_app_perf',
+//   serverUrl: 'http://localhost:8200',
+// });
 require('dotenv').config();
 const express = require('express'),
       app = express(),
