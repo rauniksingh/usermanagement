@@ -9,7 +9,7 @@ const express = require('express'),
       mongoose.Promise = global.Promise,
       bodyParser = require('body-parser'),
       chalk = require('chalk'),
-      config = require('./config/config');
+      config = require('./config/config'); 
 
 const environment = process.env.NODE_ENV || 'development';
 const environmentConfig = config[environment];
